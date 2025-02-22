@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { ChevronRight, Shield, Users, MessageCircle, Globe } from "lucide-react";
@@ -20,11 +21,11 @@ const Feature = ({
       viewport={{ once: true }}
       className="feature-card"
     >
-      <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-purple-100">
-        <Icon className="h-6 w-6 text-purple-600" />
+      <div className="mb-2 flex h-10 w-10 items-center justify-center rounded-lg bg-purple-100">
+        <Icon className="h-5 w-5 text-purple-600" />
       </div>
-      <h3 className="mb-2 text-xl font-semibold">{title}</h3>
-      <p className="text-muted-foreground">{description}</p>
+      <h3 className="mb-1 text-lg font-semibold">{title}</h3>
+      <p className="text-sm text-muted-foreground">{description}</p>
     </motion.div>
   );
 };
@@ -38,25 +39,21 @@ const Index = () => {
 
   if (!mounted) return null;
 
-  return <div className="min-h-screen overflow-hidden">
+  return <div className="h-screen overflow-hidden flex flex-col">
       {/* Hero Section */}
-      <section className="relative flex min-h-screen items-center justify-center px-4 py-20">
+      <section className="relative flex-1 flex items-center justify-center px-4 py-8">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-secondary via-background to-background opacity-50" />
         <div className="container relative z-10 mx-auto max-w-6xl">
-          <motion.div initial={{
-          opacity: 0,
-          y: 20
-        }} animate={{
-          opacity: 1,
-          y: 0
-        }} transition={{
-          duration: 0.5
-        }} className="text-center">
-            
-            <h1 className="mb-6 font-bold tracking-tight sm:text-6xl md:text-7xl text-zinc-950 text-center text-3xl">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="text-center"
+          >
+            <h1 className="mb-4 font-bold tracking-tight sm:text-5xl md:text-6xl text-zinc-950 text-center text-3xl">
               Welcome to <span className="text-black">No Entry</span>
             </h1>
-            <p className="mx-auto mb-8 max-w-2xl text-lg text-muted-foreground">
+            <p className="mx-auto mb-6 max-w-2xl text-base text-muted-foreground">
               A private social network where authenticity meets exclusivity. Connect with like-minded individuals in a space
               designed for genuine interactions.
             </p>
@@ -68,24 +65,9 @@ const Index = () => {
       </section>
 
       {/* Features Section */}
-      <section className="bg-secondary py-[32px]">
+      <section className="bg-secondary py-6">
         <div className="container mx-auto px-4">
-          <motion.div initial={{
-          opacity: 0,
-          y: 20
-        }} whileInView={{
-          opacity: 1,
-          y: 0
-        }} transition={{
-          duration: 0.5
-        }} viewport={{
-          once: true
-        }} className="mb-12 text-center">
-            
-            
-          </motion.div>
-
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
             <Feature icon={Shield} title="Private & Secure" description="Your privacy is our priority. Enjoy end-to-end encryption and complete control over your data." />
             <Feature icon={Users} title="Exclusive Community" description="Join a carefully curated community of individuals who share your interests and values." />
             <Feature icon={MessageCircle} title="Authentic Conversations" description="Engage in meaningful discussions in a space free from spam and artificial engagement." />
@@ -95,21 +77,16 @@ const Index = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="relative overflow-hidden py-20 text-white bg-violet-500 hover:bg-violet-400">
+      <section className="relative py-6 text-white bg-violet-500 hover:bg-violet-400">
         <div className="container relative z-10 mx-auto px-4 text-center">
-          <motion.div initial={{
-          opacity: 0,
-          y: 20
-        }} whileInView={{
-          opacity: 1,
-          y: 0
-        }} transition={{
-          duration: 0.5
-        }} viewport={{
-          once: true
-        }}>
-            <h2 className="mb-6 text-3xl font-bold sm:text-4xl">Ready to Join?</h2>
-            <p className="mx-auto mb-8 max-w-2xl text-lg opacity-90">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="mb-3 text-2xl font-bold sm:text-3xl">Ready to Join?</h2>
+            <p className="mx-auto mb-4 max-w-2xl text-sm opacity-90">
               Be part of an exclusive community where every connection matters.
             </p>
             <Button variant="secondary" size="lg" className="bg-white hover:bg-white/90 text-zinc-950">
