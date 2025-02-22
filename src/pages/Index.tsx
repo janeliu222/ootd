@@ -1,8 +1,16 @@
-
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { ChevronRight, Shield, Users, MessageCircle, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+import { Input } from "@/components/ui/input";
+import { useToast } from "@/components/ui/use-toast";
 
 const Feature = ({
   icon: Icon,
@@ -32,6 +40,51 @@ const Feature = ({
     </motion.div>;
 };
 
+const RequestAccessDialog = () => {
+  const [email, setEmail] = useState("");
+  const { toast } = useToast();
+  const [open, setOpen] = useState(false);
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    toast({
+      title: "Request received",
+      description: "We'll be in touch soon at " + email
+    });
+    setEmail("");
+    setOpen(false);
+  };
+
+  return (
+    <Dialog open={open} onOpenChange={setOpen}>
+      <DialogTrigger asChild>
+        <Button size="lg" className="animate-fade-in text-violet-50 bg-purple-500 hover:bg-purple-400">
+          Request Access <ChevronRight className="ml-2 h-4 w-4" />
+        </Button>
+      </DialogTrigger>
+      <DialogContent>
+        <DialogHeader>
+          <DialogTitle>Request Access</DialogTitle>
+        </DialogHeader>
+        <form onSubmit={handleSubmit} className="space-y-4 mt-4">
+          <div>
+            <Input
+              type="email"
+              placeholder="Enter your email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
+          </div>
+          <Button type="submit" className="w-full text-violet-50 bg-purple-500 hover:bg-purple-400">
+            Submit Request
+          </Button>
+        </form>
+      </DialogContent>
+    </Dialog>
+  );
+};
+
 const Index = () => {
   const [mounted, setMounted] = useState(false);
 
@@ -59,9 +112,7 @@ const Index = () => {
               Welcome to <span className="text-black">No Entry</span>
             </h1>
             <p className="mx-auto mb-6 max-w-2xl text-base text-muted-foreground">A private social network where authenticity meets exclusivity. </p>
-            <Button size="lg" className="animate-fade-in text-violet-50 bg-purple-500 hover:bg-purple-400">
-              Request Access <ChevronRight className="ml-2 h-4 w-4" />
-            </Button>
+            <RequestAccessDialog />
           </motion.div>
         </div>
       </section>
