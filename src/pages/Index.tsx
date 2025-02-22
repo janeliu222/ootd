@@ -91,9 +91,9 @@ const Index = () => {
 
   return <div className="min-h-screen flex flex-col bg-white">
       {/* Hero Section */}
-      <section className="relative py-12 bg-white">
+      <section className="relative py-12 lg:py-20 bg-white">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-secondary via-background to-background opacity-50" />
-        <div className="container relative z-10 mx-auto max-w-6xl">
+        <div className="container relative z-10 mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <motion.div initial={{
           opacity: 0,
           y: 20
@@ -102,18 +102,22 @@ const Index = () => {
           y: 0
         }} transition={{
           duration: 0.5
-        }} className="text-center">
-            <h1 className="mb-4 font-bold tracking-tight sm:text-5xl md:text-6xl text-zinc-950 text-center text-3xl">
+        }} className="text-center space-y-8">
+            <h1 className="mb-4 font-bold tracking-tight text-3xl sm:text-5xl md:text-6xl text-zinc-950">
               Welcome to <span className="text-black">NoEntry</span>
             </h1>
-            <p className="mx-auto mb-6 max-w-2xl text-base text-muted-foreground font-thin">A private social network where authenticity meets exclusivity. </p>
-            <RequestAccessDialog />
+            <p className="mx-auto mb-8 max-w-2xl text-base text-muted-foreground font-thin">
+              A private social network where authenticity meets exclusivity.
+            </p>
+            <div className="flex justify-center">
+              <RequestAccessDialog />
+            </div>
           </motion.div>
         </div>
       </section>
 
       {/* App Preview Section */}
-      <section className="relative bg-white py-0">
+      <section className="relative bg-white py-12 lg:py-16">
         <div className="container mx-auto px-4">
           <motion.div initial={{
           opacity: 0,
@@ -135,8 +139,8 @@ const Index = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="relative py-6 bg-white">
-        <div className="container relative z-10 mx-auto px-4 text-center">
+      <section className="relative py-12 lg:py-16 bg-white">
+        <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div initial={{
           opacity: 0,
           y: 20
