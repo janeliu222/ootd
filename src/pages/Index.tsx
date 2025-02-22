@@ -1,7 +1,9 @@
+
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { ChevronRight, Shield, Users, MessageCircle, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
+
 const Feature = ({
   icon: Icon,
   title,
@@ -11,12 +13,16 @@ const Feature = ({
   title: string;
   description: string;
 }) => {};
+
 const Index = () => {
   const [mounted, setMounted] = useState(false);
+
   useEffect(() => {
     setMounted(true);
   }, []);
+
   if (!mounted) return null;
+
   return <div className="min-h-screen overflow-hidden">
       {/* Hero Section */}
       <section className="relative flex min-h-screen items-center justify-center px-4 py-20">
@@ -33,7 +39,7 @@ const Index = () => {
         }} className="text-center">
             
             <h1 className="mb-6 font-bold tracking-tight sm:text-6xl md:text-7xl text-zinc-950 text-center text-3xl">
-              Welcome to <span className="gradient-text text-zinc-950">No Entry</span>
+              Welcome to <span className="text-black">No Entry</span>
             </h1>
             <p className="mx-auto mb-8 max-w-2xl text-lg text-muted-foreground">
               A private social network where authenticity meets exclusivity. Connect with like-minded individuals in a space
@@ -99,4 +105,5 @@ const Index = () => {
       </section>
     </div>;
 };
+
 export default Index;
