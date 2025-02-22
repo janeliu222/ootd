@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { ChevronRight, Shield, Users, MessageCircle, Globe } from "lucide-react";
@@ -12,7 +11,23 @@ const Feature = ({
   icon: any;
   title: string;
   description: string;
-}) => {};
+}) => {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+      viewport={{ once: true }}
+      className="feature-card"
+    >
+      <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-purple-100">
+        <Icon className="h-6 w-6 text-purple-600" />
+      </div>
+      <h3 className="mb-2 text-xl font-semibold">{title}</h3>
+      <p className="text-muted-foreground">{description}</p>
+    </motion.div>
+  );
+};
 
 const Index = () => {
   const [mounted, setMounted] = useState(false);
