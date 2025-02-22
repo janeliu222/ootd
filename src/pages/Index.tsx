@@ -91,7 +91,7 @@ const Index = () => {
 
   return <div className="min-h-screen flex flex-col bg-white">
       {/* Hero Section */}
-      <section className="relative py-12 lg:py-20 bg-white">
+      <section className="relative py-8 lg:py-12 bg-white">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-secondary via-background to-background opacity-50" />
         <div className="container relative z-10 mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <motion.div initial={{
@@ -102,11 +102,11 @@ const Index = () => {
           y: 0
         }} transition={{
           duration: 0.5
-        }} className="text-center space-y-8">
-            <h1 className="mb-4 font-bold tracking-tight text-3xl sm:text-5xl md:text-6xl text-zinc-950">
+        }} className="text-center space-y-4">
+            <h1 className="font-bold tracking-tight text-3xl sm:text-5xl md:text-6xl text-zinc-950">
               Welcome to <span className="text-black">NoEntry</span>
             </h1>
-            <p className="mx-auto mb-8 max-w-2xl text-base text-muted-foreground font-thin">
+            <p className="mx-auto max-w-2xl text-base text-muted-foreground font-thin">
               A private social network where authenticity meets exclusivity.
             </p>
             <div className="flex justify-center">
@@ -117,7 +117,7 @@ const Index = () => {
       </section>
 
       {/* App Preview Section */}
-      <section className="relative bg-white py-12 lg:py-16">
+      <section className="relative bg-white py-8">
         <div className="container mx-auto px-4">
           <motion.div initial={{
           opacity: 0,
@@ -130,7 +130,7 @@ const Index = () => {
         }} viewport={{
           once: true
         }} className="flex justify-center bg-white">
-            <div className="relative w-[240px] h-[480px] rounded-[2.5rem] border-8 border-neutral-800 bg-black overflow-hidden shadow-2xl">
+            <div className="relative w-[200px] h-[400px] rounded-[2.5rem] border-8 border-neutral-800 bg-black overflow-hidden shadow-2xl">
               <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-1/3 h-5 bg-neutral-800 rounded-b-2xl"></div>
               <img src="/lovable-uploads/80d36686-0d14-4e28-bd1e-f744c2523bdd.png" alt="NoEntry App Preview" className="w-full h-full object-cover" />
             </div>
@@ -139,7 +139,7 @@ const Index = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="relative py-12 lg:py-16 bg-white">
+      <section className="relative py-8 bg-white">
         <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div initial={{
           opacity: 0,
