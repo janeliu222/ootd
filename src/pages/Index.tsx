@@ -162,7 +162,7 @@ const Index = () => {
         }} viewport={{
           once: true
         }}>
-            <Button variant="secondary" size="lg" onClick={handleContactClick} className="text-neutral-400 font-light text-center bg-zinc-100">
+            <Button variant="secondary" size="lg" onClick={handleContactClick} className="text-neutral-400 font-light text-center bg-accent-foreground">
               Contact Us
             </Button>
           </motion.div>
