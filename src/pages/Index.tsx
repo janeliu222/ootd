@@ -2,16 +2,9 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { ChevronRight, Shield, Users, MessageCircle, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import {
-  Dialog,
-  DialogContent,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/components/ui/use-toast";
-
 const Feature = ({
   icon: Icon,
   title,
@@ -39,12 +32,12 @@ const Feature = ({
       <p className="text-sm text-muted-foreground">{description}</p>
     </motion.div>;
 };
-
 const RequestAccessDialog = () => {
   const [email, setEmail] = useState("");
-  const { toast } = useToast();
+  const {
+    toast
+  } = useToast();
   const [open, setOpen] = useState(false);
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     toast({
@@ -54,9 +47,7 @@ const RequestAccessDialog = () => {
     setEmail("");
     setOpen(false);
   };
-
-  return (
-    <Dialog open={open} onOpenChange={setOpen}>
+  return <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>
         <Button size="lg" className="animate-fade-in text-violet-50 bg-purple-500 hover:bg-purple-400">
           Request Access <ChevronRight className="ml-2 h-4 w-4" />
@@ -68,40 +59,30 @@ const RequestAccessDialog = () => {
         </DialogHeader>
         <form onSubmit={handleSubmit} className="space-y-4 mt-4">
           <div>
-            <Input
-              type="email"
-              placeholder="Enter your email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-            />
+            <Input type="email" placeholder="Enter your email" value={email} onChange={e => setEmail(e.target.value)} required />
           </div>
           <Button type="submit" className="w-full text-violet-50 bg-purple-500 hover:bg-purple-400">
             Submit Request
           </Button>
         </form>
       </DialogContent>
-    </Dialog>
-  );
+    </Dialog>;
 };
-
 const Index = () => {
   const [mounted, setMounted] = useState(false);
-  const { toast } = useToast();
-
+  const {
+    toast
+  } = useToast();
   useEffect(() => {
     setMounted(true);
   }, []);
-
   const handleContactClick = () => {
     toast({
       title: "Contact Email",
       description: "eason@flickstudioinc.com"
     });
   };
-
   if (!mounted) return null;
-
   return <div className="h-screen overflow-hidden flex flex-col">
       {/* Hero Section */}
       <section className="relative flex-1 flex items-center justify-center px-4 py-8">
@@ -117,7 +98,7 @@ const Index = () => {
           duration: 0.5
         }} className="text-center">
             <h1 className="mb-4 font-bold tracking-tight sm:text-5xl md:text-6xl text-zinc-950 text-center text-3xl">
-              Welcome to <span className="text-black">No Entry</span>
+              Welcome to <span className="text-black">NoEntry</span>
             </h1>
             <p className="mx-auto mb-6 max-w-2xl text-base text-muted-foreground">A private social network where authenticity meets exclusivity. </p>
             <RequestAccessDialog />
@@ -146,12 +127,7 @@ const Index = () => {
             <p className="mx-auto mb-4 max-w-2xl text-sm opacity-90">
               Be part of an exclusive community where every connection matters.
             </p>
-            <Button 
-              variant="secondary" 
-              size="lg" 
-              className="bg-white hover:bg-white/90 text-zinc-950"
-              onClick={handleContactClick}
-            >
+            <Button variant="secondary" size="lg" className="bg-white hover:bg-white/90 text-zinc-950" onClick={handleContactClick}>
               Contact Us
             </Button>
           </motion.div>
@@ -159,5 +135,4 @@ const Index = () => {
       </section>
     </div>;
 };
-
 export default Index;
