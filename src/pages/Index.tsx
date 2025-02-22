@@ -87,10 +87,18 @@ const RequestAccessDialog = () => {
 
 const Index = () => {
   const [mounted, setMounted] = useState(false);
+  const { toast } = useToast();
 
   useEffect(() => {
     setMounted(true);
   }, []);
+
+  const handleContactClick = () => {
+    toast({
+      title: "Contact Email",
+      description: "eason@flickstudioinc.com"
+    });
+  };
 
   if (!mounted) return null;
 
@@ -138,7 +146,12 @@ const Index = () => {
             <p className="mx-auto mb-4 max-w-2xl text-sm opacity-90">
               Be part of an exclusive community where every connection matters.
             </p>
-            <Button variant="secondary" size="lg" className="bg-white hover:bg-white/90 text-zinc-950">
+            <Button 
+              variant="secondary" 
+              size="lg" 
+              className="bg-white hover:bg-white/90 text-zinc-950"
+              onClick={handleContactClick}
+            >
               Contact Us
             </Button>
           </motion.div>
