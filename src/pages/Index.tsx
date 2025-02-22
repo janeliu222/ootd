@@ -123,7 +123,7 @@ const Index = () => {
         }} viewport={{
           once: true
         }}>
-            <h2 className="mb-3 text-2xl font-bold sm:text-3xl">Ready to Join?</h2>
+            
             <p className="mx-auto mb-4 max-w-2xl text-sm opacity-90">
               Be part of an exclusive community where every connection matters.
             </p>
