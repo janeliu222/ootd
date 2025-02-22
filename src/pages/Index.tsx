@@ -49,7 +49,7 @@ const RequestAccessDialog = () => {
   };
   return <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>
-        <Button size="lg" className="animate-fade-in text-violet-50 bg-violet-600 hover:bg-violet-500">
+        <Button size="lg" className="animate-fade-in text-violet-50 bg-violet-600 hover:bg-violet-500 font-semibold">
           Request Access <ChevronRight className="ml-2 h-4 w-4" />
         </Button>
       </DialogTrigger>
