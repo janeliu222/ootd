@@ -32,8 +32,8 @@ const Index = () => {
           duration: 0.5
         }} className="text-center">
             
-            <h1 className="mb-6 text-4xl font-bold tracking-tight sm:text-6xl md:text-7xl">
-              Welcome to <span className="gradient-text text-stone-950">No Entry</span>
+            <h1 className="mb-6 font-bold tracking-tight sm:text-6xl md:text-7xl text-zinc-950 text-center text-3xl">
+              Welcome to <span className="gradient-text text-zinc-950">No Entry</span>
             </h1>
             <p className="mx-auto mb-8 max-w-2xl text-lg text-muted-foreground">
               A private social network where authenticity meets exclusivity. Connect with like-minded individuals in a space
