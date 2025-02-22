@@ -125,7 +125,7 @@ const Index = () => {
         }}>
             
             
-            <Button variant="secondary" size="lg" className="bg-white hover:bg-white/90 text-zinc-950" onClick={handleContactClick}>
+            <Button variant="secondary" size="lg" onClick={handleContactClick} className="bg-white hover:bg-white/90 text-zinc-950 font-semibold">
               Contact Us
             </Button>
           </motion.div>
