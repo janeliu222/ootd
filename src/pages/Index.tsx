@@ -52,7 +52,7 @@ const RequestAccessDialog = () => {
 
   return <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>
-        <Button size="lg" className="animate-fade-in text-violet-50 bg-violet-600 hover:bg-violet-500 font-semibold">
+        <Button size="lg" className="animate-fade-in bg-[#9b87f5] hover:bg-[#7E69AB] text-white font-semibold shadow-lg transition-all duration-300">
           Request Access <ChevronRight className="ml-2 h-4 w-4" />
         </Button>
       </DialogTrigger>
@@ -64,7 +64,7 @@ const RequestAccessDialog = () => {
           <div>
             <Input type="email" placeholder="Enter your email" value={email} onChange={e => setEmail(e.target.value)} required />
           </div>
-          <Button type="submit" className="w-full text-violet-50 bg-purple-500 hover:bg-purple-400">
+          <Button type="submit" className="w-full bg-[#9b87f5] hover:bg-[#7E69AB] text-white">
             Submit Request
           </Button>
         </form>
