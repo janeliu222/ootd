@@ -110,7 +110,7 @@ const Index = () => {
       
 
       {/* CTA Section */}
-      <section className="relative py-6 text-white bg-violet-500 hover:bg-violet-400">
+      <section className="relative py-6 text-white bg-violet-600 hover:bg-violet-500">
         <div className="container relative z-10 mx-auto px-4 text-center">
           <motion.div initial={{
           opacity: 0,
