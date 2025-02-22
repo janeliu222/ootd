@@ -49,7 +49,7 @@ const RequestAccessDialog = () => {
   };
   return <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>
-        <Button size="lg" className="animate-fade-in text-violet-50 bg-violet-600 hover:bg-violet-500 text-center py-0">
+        <Button size="lg" className="animate-fade-in text-violet-50 bg-violet-600 hover:bg-violet-500">
           Request Access <ChevronRight className="ml-2 h-4 w-4" />
         </Button>
       </DialogTrigger>
@@ -100,7 +100,7 @@ const Index = () => {
             <h1 className="mb-4 font-bold tracking-tight sm:text-5xl md:text-6xl text-zinc-950 text-center text-3xl">
               Welcome to <span className="text-black">NoEntry</span>
             </h1>
-            <p className="mx-auto mb-6 max-w-2xl text-base text-muted-foreground">Be part of an exclusive community where every connection matters.</p>
+            <p className="mx-auto mb-6 max-w-2xl text-base text-muted-foreground">A private social network where authenticity meets exclusivity. </p>
             <RequestAccessDialog />
           </motion.div>
         </div>
@@ -110,7 +110,29 @@ const Index = () => {
       
 
       {/* CTA Section */}
-      
+      <section className="relative py-6 text-white bg-violet-600 hover:bg-violet-500">
+        <div className="container relative z-10 mx-auto px-4 text-center">
+          <motion.div initial={{
+          opacity: 0,
+          y: 20
+        }} whileInView={{
+          opacity: 1,
+          y: 0
+        }} transition={{
+          duration: 0.5
+        }} viewport={{
+          once: true
+        }}>
+            
+            <p className="mx-auto mb-4 max-w-2xl text-sm opacity-90">
+              Be part of an exclusive community where every connection matters.
+            </p>
+            <Button variant="secondary" size="lg" className="bg-white hover:bg-white/90 text-zinc-950" onClick={handleContactClick}>
+              Contact Us
+            </Button>
+          </motion.div>
+        </div>
+      </section>
     </div>;
 };
 export default Index;
