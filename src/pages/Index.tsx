@@ -110,7 +110,7 @@ const Index = () => {
       
 
       {/* CTA Section */}
-      <section className="relative py-6 text-white bg-violet-600 hover:bg-violet-500">
+      <section className="relative py-6 text-white bg-neutral-50">
         <div className="container relative z-10 mx-auto px-4 text-center">
           <motion.div initial={{
           opacity: 0,
@@ -124,9 +124,7 @@ const Index = () => {
           once: true
         }}>
             
-            <p className="mx-auto mb-4 max-w-2xl text-sm opacity-90">
-              Be part of an exclusive community where every connection matters.
-            </p>
+            
             <Button variant="secondary" size="lg" className="bg-white hover:bg-white/90 text-zinc-950" onClick={handleContactClick}>
               Contact Us
             </Button>
