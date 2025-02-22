@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { ChevronRight, Shield, Users, MessageCircle, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
+
 const Feature = ({
   icon: Icon,
   title,
@@ -30,12 +31,16 @@ const Feature = ({
       <p className="text-sm text-muted-foreground">{description}</p>
     </motion.div>;
 };
+
 const Index = () => {
   const [mounted, setMounted] = useState(false);
+
   useEffect(() => {
     setMounted(true);
   }, []);
+
   if (!mounted) return null;
+
   return <div className="h-screen overflow-hidden flex flex-col">
       {/* Hero Section */}
       <section className="relative flex-1 flex items-center justify-center px-4 py-8">
@@ -83,11 +88,12 @@ const Index = () => {
               Be part of an exclusive community where every connection matters.
             </p>
             <Button variant="secondary" size="lg" className="bg-white hover:bg-white/90 text-zinc-950">
-              Request Access
+              Contact Us
             </Button>
           </motion.div>
         </div>
       </section>
     </div>;
 };
+
 export default Index;
