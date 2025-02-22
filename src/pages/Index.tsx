@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { ChevronRight, Shield, Users, MessageCircle, Globe } from "lucide-react";
@@ -52,9 +53,9 @@ const Index = () => {
             <h1 className="mb-4 font-bold tracking-tight sm:text-5xl md:text-6xl text-zinc-950 text-center text-3xl">
               Welcome to <span className="text-black">No Entry</span>
             </h1>
-            <p className="mx-auto mb-6 max-w-2xl text-base text-muted-foreground">A private social network where authenticity meets exclusivity. </p>
+            <p className="mx-auto mb-6 max-w-2xl text-base text-muted-foreground">A private social network where authenticity meets exclusivity. </p>
             <Button size="lg" className="animate-fade-in text-violet-50 bg-purple-500 hover:bg-purple-400">
-              Get Started <ChevronRight className="ml-2 h-4 w-4" />
+              Request Access <ChevronRight className="ml-2 h-4 w-4" />
             </Button>
           </motion.div>
         </div>
