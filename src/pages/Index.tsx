@@ -100,7 +100,7 @@ const Index = () => {
             <h1 className="mb-4 font-bold tracking-tight sm:text-5xl md:text-6xl text-zinc-950 text-center text-3xl">
               Welcome to <span className="text-black">NoEntry</span>
             </h1>
-            <p className="mx-auto mb-6 max-w-2xl text-base text-muted-foreground">A private social network where authenticity meets exclusivity. </p>
+            <p className="mx-auto mb-6 max-w-2xl text-base text-muted-foreground font-thin">A private social network where authenticity meets exclusivity. </p>
             <RequestAccessDialog />
           </motion.div>
         </div>
