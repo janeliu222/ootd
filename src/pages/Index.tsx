@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { ChevronRight, Shield, Users, MessageCircle, Globe } from "lucide-react";
@@ -6,7 +5,6 @@ import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/components/ui/use-toast";
-
 const Feature = ({
   icon: Icon,
   title,
@@ -34,12 +32,12 @@ const Feature = ({
       <p className="text-sm text-muted-foreground">{description}</p>
     </motion.div>;
 };
-
 const RequestAccessDialog = () => {
   const [email, setEmail] = useState("");
-  const { toast } = useToast();
+  const {
+    toast
+  } = useToast();
   const [open, setOpen] = useState(false);
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     toast({
@@ -49,7 +47,6 @@ const RequestAccessDialog = () => {
     setEmail("");
     setOpen(false);
   };
-
   return <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>
         <Button size="lg" className="animate-fade-in text-violet-50 bg-violet-600 hover:bg-violet-500 font-semibold">
@@ -71,24 +68,21 @@ const RequestAccessDialog = () => {
       </DialogContent>
     </Dialog>;
 };
-
 const Index = () => {
   const [mounted, setMounted] = useState(false);
-  const { toast } = useToast();
-
+  const {
+    toast
+  } = useToast();
   useEffect(() => {
     setMounted(true);
   }, []);
-
   const handleContactClick = () => {
     toast({
       title: "Contact Email",
       description: "eason@flickstudioinc.com"
     });
   };
-
   if (!mounted) return null;
-
   return <div className="min-h-screen flex flex-col">
       {/* Hero Section */}
       <section className="relative py-12">
@@ -113,22 +107,22 @@ const Index = () => {
       </section>
 
       {/* App Preview Section */}
-      <section className="relative py-16 bg-neutral-950">
+      <section className="relative bg-neutral-50 py-0">
         <div className="container mx-auto px-4">
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-            className="flex justify-center"
-          >
+          <motion.div initial={{
+          opacity: 0,
+          y: 20
+        }} whileInView={{
+          opacity: 1,
+          y: 0
+        }} transition={{
+          duration: 0.5
+        }} viewport={{
+          once: true
+        }} className="flex justify-center bg-neutral-50">
             <div className="relative w-[240px] h-[480px] rounded-[2.5rem] border-8 border-neutral-800 bg-black overflow-hidden shadow-2xl">
               <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-1/3 h-5 bg-neutral-800 rounded-b-2xl"></div>
-              <img 
-                src="/lovable-uploads/80d36686-0d14-4e28-bd1e-f744c2523bdd.png" 
-                alt="NoEntry App Preview" 
-                className="w-full h-full object-cover"
-              />
+              <img src="/lovable-uploads/80d36686-0d14-4e28-bd1e-f744c2523bdd.png" alt="NoEntry App Preview" className="w-full h-full object-cover" />
             </div>
           </motion.div>
         </div>
@@ -156,5 +150,4 @@ const Index = () => {
       </section>
     </div>;
 };
-
 export default Index;
