@@ -109,9 +109,6 @@ const Index = () => {
             <p className="mx-auto max-w-2xl text-base text-muted-foreground font-thin">
               A private social network where authenticity meets exclusivity.
             </p>
-            <div className="flex justify-center">
-              <RequestAccessDialog />
-            </div>
           </motion.div>
         </div>
       </section>
@@ -134,6 +131,25 @@ const Index = () => {
               <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-1/3 h-5 bg-neutral-800 rounded-b-2xl"></div>
               <img src="/lovable-uploads/80d36686-0d14-4e28-bd1e-f744c2523bdd.png" alt="NoEntry App Preview" className="w-full h-full object-cover" />
             </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Request Access Section */}
+      <section className="relative bg-white py-8">
+        <div className="container mx-auto px-4 text-center">
+          <motion.div initial={{
+          opacity: 0,
+          y: 20
+        }} whileInView={{
+          opacity: 1,
+          y: 0
+        }} transition={{
+          duration: 0.5
+        }} viewport={{
+          once: true
+        }} className="flex justify-center">
+            <RequestAccessDialog />
           </motion.div>
         </div>
       </section>
