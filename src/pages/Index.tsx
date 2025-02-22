@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { ChevronRight, Shield, Users, MessageCircle, Globe } from "lucide-react";
@@ -6,7 +5,6 @@ import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/components/ui/use-toast";
-
 const Feature = ({
   icon: Icon,
   title,
@@ -34,12 +32,12 @@ const Feature = ({
       <p className="text-sm text-muted-foreground">{description}</p>
     </motion.div>;
 };
-
 const RequestAccessDialog = () => {
   const [email, setEmail] = useState("");
-  const { toast } = useToast();
+  const {
+    toast
+  } = useToast();
   const [open, setOpen] = useState(false);
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     toast({
@@ -49,7 +47,6 @@ const RequestAccessDialog = () => {
     setEmail("");
     setOpen(false);
   };
-
   return <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>
         <Button size="lg" className="animate-fade-in bg-[#9b87f5] hover:bg-[#7E69AB] text-white font-semibold shadow-lg transition-all duration-300">
@@ -71,24 +68,21 @@ const RequestAccessDialog = () => {
       </DialogContent>
     </Dialog>;
 };
-
 const Index = () => {
   const [mounted, setMounted] = useState(false);
-  const { toast } = useToast();
-
+  const {
+    toast
+  } = useToast();
   useEffect(() => {
     setMounted(true);
   }, []);
-
   const handleContactClick = () => {
     toast({
       title: "Contact Email",
       description: "eason@flickstudioinc.com"
     });
   };
-
   if (!mounted) return null;
-
   return <div className="min-h-screen flex flex-col bg-white">
       {/* Hero Section */}
       <section className="relative py-8 lg:py-12 bg-white">
@@ -114,7 +108,7 @@ const Index = () => {
       </section>
 
       {/* App Preview Section */}
-      <section className="relative bg-white py-8">
+      <section className="relative bg-white py-0">
         <div className="container mx-auto px-4">
           <motion.div initial={{
           opacity: 0,
@@ -176,5 +170,4 @@ const Index = () => {
       </section>
     </div>;
 };
-
 export default Index;
