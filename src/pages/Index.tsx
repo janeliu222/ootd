@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { ChevronRight, Shield, Users, MessageCircle, Globe } from "lucide-react";
@@ -124,15 +125,24 @@ const Index = () => {
       <section className="relative py-8 lg:py-12 bg-white">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-secondary via-background to-background opacity-50" />
         <div className="container relative z-10 mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          <motion.div initial={{
-          opacity: 0,
-          y: 20
-        }} animate={{
-          opacity: 1,
-          y: 0
-        }} transition={{
-          duration: 0.5
-        }} className="text-center space-y-4">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="text-center space-y-4"
+          >
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.7, ease: "easeOut" }}
+              className="flex justify-center mb-4"
+            >
+              <img 
+                src="/lovable-uploads/7515c51c-8397-4cf8-8e2a-58d2d53f26bf.png" 
+                alt="OOTD Logo" 
+                className="h-24 md:h-32 w-auto"
+              />
+            </motion.div>
             <h1 className="font-bold tracking-tight text-3xl sm:text-5xl md:text-6xl text-zinc-950">
               Welcome to <span className="text-black">NoEntry</span>
             </h1>
