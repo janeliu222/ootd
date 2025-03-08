@@ -130,18 +130,6 @@ const Index = () => {
             transition={{ duration: 0.5 }}
             className="text-center space-y-4"
           >
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.7, ease: "easeOut" }}
-              className="flex justify-center mb-4"
-            >
-              <img 
-                src="/lovable-uploads/7515c51c-8397-4cf8-8e2a-58d2d53f26bf.png" 
-                alt="NoEntry Logo" 
-                className="h-24 md:h-32 w-auto"
-              />
-            </motion.div>
             <h1 className="font-bold tracking-tight text-3xl sm:text-5xl md:text-6xl text-zinc-950">
               Welcome to NoEntry
             </h1>
