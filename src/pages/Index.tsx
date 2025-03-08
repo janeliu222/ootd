@@ -143,11 +143,7 @@ const Index = () => {
               />
             </motion.div>
             <h1 className="font-bold tracking-tight text-3xl sm:text-5xl md:text-6xl text-zinc-950">
-              Welcome to <img 
-                src="/lovable-uploads/7515c51c-8397-4cf8-8e2a-58d2d53f26bf.png" 
-                alt="NoEntry Logo" 
-                className="inline-block h-10 md:h-14 w-auto align-middle mx-1"
-              />
+              Welcome to NoEntry
             </h1>
             <p className="mx-auto max-w-2xl text-base text-muted-foreground font-thin">
               A private social network where authenticity meets exclusivity.
