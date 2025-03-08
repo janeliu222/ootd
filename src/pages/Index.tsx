@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { ChevronRight, Shield, Users, MessageCircle, Globe } from "lucide-react";
@@ -139,12 +138,16 @@ const Index = () => {
             >
               <img 
                 src="/lovable-uploads/7515c51c-8397-4cf8-8e2a-58d2d53f26bf.png" 
-                alt="OOTD Logo" 
+                alt="NoEntry Logo" 
                 className="h-24 md:h-32 w-auto"
               />
             </motion.div>
             <h1 className="font-bold tracking-tight text-3xl sm:text-5xl md:text-6xl text-zinc-950">
-              Welcome to <span className="text-black">NoEntry</span>
+              Welcome to <img 
+                src="/lovable-uploads/7515c51c-8397-4cf8-8e2a-58d2d53f26bf.png" 
+                alt="NoEntry Logo" 
+                className="inline-block h-10 md:h-14 w-auto align-middle mx-1"
+              />
             </h1>
             <p className="mx-auto max-w-2xl text-base text-muted-foreground font-thin">
               A private social network where authenticity meets exclusivity.
