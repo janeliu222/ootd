@@ -5,7 +5,6 @@ import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/components/ui/use-toast";
-
 const Feature = ({
   icon: Icon,
   title,
@@ -33,17 +32,16 @@ const Feature = ({
       <p className="text-sm text-muted-foreground">{description}</p>
     </motion.div>;
 };
-
 const RequestAccessDialog = () => {
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const { toast } = useToast();
+  const {
+    toast
+  } = useToast();
   const [open, setOpen] = useState(false);
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
     try {
       await fetch("https://formsubmit.co/eason@flickstudioinc.com", {
         method: "POST",
@@ -59,12 +57,10 @@ const RequestAccessDialog = () => {
           source: window.location.href
         })
       });
-      
       toast({
         title: "Request received",
         description: "We'll be in touch soon at " + email
       });
-      
       setEmail("");
       setOpen(false);
     } catch (error) {
@@ -78,7 +74,6 @@ const RequestAccessDialog = () => {
       setIsSubmitting(false);
     }
   };
-
   return <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>
         <Button size="lg" className="animate-fade-in bg-[#9b87f5] hover:bg-[#7E69AB] text-white font-semibold shadow-lg transition-all duration-300">
@@ -93,46 +88,42 @@ const RequestAccessDialog = () => {
           <div>
             <Input type="email" placeholder="Enter your email" value={email} onChange={e => setEmail(e.target.value)} required />
           </div>
-          <Button 
-            type="submit" 
-            className="w-full bg-[#9b87f5] hover:bg-[#7E69AB] text-white"
-            disabled={isSubmitting}
-          >
+          <Button type="submit" className="w-full bg-[#9b87f5] hover:bg-[#7E69AB] text-white" disabled={isSubmitting}>
             {isSubmitting ? "Sending..." : "Submit Request"}
           </Button>
         </form>
       </DialogContent>
     </Dialog>;
 };
-
 const Index = () => {
   const [mounted, setMounted] = useState(false);
-  const { toast } = useToast();
+  const {
+    toast
+  } = useToast();
   useEffect(() => {
     setMounted(true);
   }, []);
-
   const handleContactClick = () => {
     toast({
       title: "Contact Email",
       description: "eason@flickstudioinc.com"
     });
   };
-
   if (!mounted) return null;
   return <div className="min-h-screen flex flex-col bg-white">
       <section className="relative py-8 lg:py-12 bg-white">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-secondary via-background to-background opacity-50" />
         <div className="container relative z-10 mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="text-center space-y-4"
-          >
-            <h1 className="font-bold tracking-tight text-3xl sm:text-5xl md:text-6xl text-zinc-950">
-              Welcome to NoEntry
-            </h1>
+          <motion.div initial={{
+          opacity: 0,
+          y: 20
+        }} animate={{
+          opacity: 1,
+          y: 0
+        }} transition={{
+          duration: 0.5
+        }} className="text-center space-y-4">
+            <h1 className="font-bold tracking-tight text-3xl sm:text-5xl md:text-6xl text-zinc-950">Welcome to OOTD</h1>
             <p className="mx-auto max-w-2xl text-base text-muted-foreground font-thin">
               A private social network where authenticity meets exclusivity.
             </p>
@@ -200,5 +191,4 @@ const Index = () => {
       </section>
     </div>;
 };
-
 export default Index;
