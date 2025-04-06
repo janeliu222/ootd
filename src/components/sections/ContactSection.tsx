@@ -21,7 +21,7 @@ const ContactSection = ({ handleContactClick }: ContactSectionProps) => {
           <div className="flex justify-center">
             <Button 
               onClick={handleContactClick} 
-              className="flex items-center gap-2 bg-[#9b87f5] hover:bg-[#7E69AB] text-white px-5 py-2 text-sm sm:text-base"
+              className="flex items-center gap-2 bg-gray-500 hover:bg-gray-600 text-white px-5 py-2 text-sm sm:text-base"
             >
               <Mail className="h-4 w-4" />
               Contact Support
