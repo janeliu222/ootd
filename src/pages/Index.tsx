@@ -30,7 +30,7 @@ const Index = () => {
       <HeroSection />
       <AppPreviewSection />
       
-      <section className="relative bg-white py-8">
+      <section className="relative bg-white py-16">
         <div className="container mx-auto px-4 text-center">
           <RequestAccessDialog />
         </div>
