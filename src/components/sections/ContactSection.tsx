@@ -18,9 +18,6 @@ const ContactSection = ({ handleContactClick }: ContactSectionProps) => {
           viewport={{ once: true }}
           className="text-center space-y-8"
         >
-          <h2 className="tracking-tight text-2xl sm:text-3xl md:text-4xl text-zinc-950 font-bold">
-            Contact Us
-          </h2>
           <div className="flex justify-center mt-6">
             <Button 
               onClick={handleContactClick} 
