@@ -5,7 +5,6 @@ import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/components/ui/use-toast";
-
 const Feature = ({
   icon: Icon,
   title,
@@ -33,7 +32,6 @@ const Feature = ({
       <p className="text-sm text-muted-foreground">{description}</p>
     </motion.div>;
 };
-
 const RequestAccessDialog = () => {
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -78,9 +76,7 @@ const RequestAccessDialog = () => {
   };
   return <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>
-        <Button size="lg" className="animate-fade-in bg-[#9b87f5] hover:bg-[#7E69AB] text-white font-semibold shadow-lg transition-all duration-300">
-          Request Access <ChevronRight className="ml-2 h-4 w-4" />
-        </Button>
+        
       </DialogTrigger>
       <DialogContent>
         <DialogHeader>
@@ -97,27 +93,21 @@ const RequestAccessDialog = () => {
       </DialogContent>
     </Dialog>;
 };
-
 const Index = () => {
   const [mounted, setMounted] = useState(false);
   const {
     toast
   } = useToast();
-  
   useEffect(() => {
     setMounted(true);
   }, []);
-
   const handleAppStoreClick = () => {
     window.open("https://apps.apple.com/ca/app/ootd-exploring-every-day/id6742367628", "_blank");
   };
-
   const handleContactClick = () => {
     window.location.href = "mailto:eason@flickstudio.com";
   };
-
   if (!mounted) return null;
-  
   return <div className="min-h-screen flex flex-col bg-white">
       <section className="relative py-8 lg:py-12 bg-white">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-secondary via-background to-background opacity-50" />
@@ -178,7 +168,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="relative py-8 bg-white">
+      <section className="relative bg-white py-0">
         <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div initial={{
           opacity: 0,
@@ -191,10 +181,7 @@ const Index = () => {
         }} viewport={{
           once: true
         }}>
-            <Button 
-              onClick={handleAppStoreClick} 
-              className="flex items-center gap-2 bg-[#9b87f5] hover:bg-[#7E69AB] text-white"
-            >
+            <Button onClick={handleAppStoreClick} className="flex items-center gap-2 bg-[#9b87f5] hover:bg-[#7E69AB] text-white px-[240px] text-right">
               Download now from the App Store.
             </Button>
           </motion.div>
@@ -203,22 +190,23 @@ const Index = () => {
 
       <section className="relative py-16 bg-gray-50">
         <div className="container relative z-10 mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-            className="text-center space-y-8"
-          >
+          <motion.div initial={{
+          opacity: 0,
+          y: 20
+        }} whileInView={{
+          opacity: 1,
+          y: 0
+        }} transition={{
+          duration: 0.5
+        }} viewport={{
+          once: true
+        }} className="text-center space-y-8">
             <h2 className="font-semibold tracking-tight text-2xl sm:text-3xl md:text-4xl text-zinc-950">Contact Us</h2>
             <p className="mx-auto max-w-2xl text-base text-muted-foreground">
               Have questions or need assistance? Get in touch with our team.
             </p>
             <div className="flex justify-center mt-6">
-              <Button 
-                onClick={handleContactClick}
-                className="flex items-center gap-2 bg-[#9b87f5] hover:bg-[#7E69AB] text-white"
-              >
+              <Button onClick={handleContactClick} className="flex items-center gap-2 bg-[#9b87f5] hover:bg-[#7E69AB] text-white">
                 <Mail className="h-4 w-4" />
                 Contact Support
               </Button>
@@ -228,5 +216,4 @@ const Index = () => {
       </section>
     </div>;
 };
-
 export default Index;
