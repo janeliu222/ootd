@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/components/ui/use-toast";
+
 const Feature = ({
   icon: Icon,
   title,
@@ -32,6 +33,7 @@ const Feature = ({
       <p className="text-sm text-muted-foreground">{description}</p>
     </motion.div>;
 };
+
 const RequestAccessDialog = () => {
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -95,21 +97,23 @@ const RequestAccessDialog = () => {
       </DialogContent>
     </Dialog>;
 };
+
 const Index = () => {
   const [mounted, setMounted] = useState(false);
   const {
     toast
   } = useToast();
+  
   useEffect(() => {
     setMounted(true);
   }, []);
-  const handleContactClick = () => {
-    toast({
-      title: "Contact Email",
-      description: "eason@flickstudioinc.com"
-    });
+
+  const handleAppStoreClick = () => {
+    window.open("https://apps.apple.com/ca/app/ootd-exploring-every-day/id6742367628", "_blank");
   };
+
   if (!mounted) return null;
+  
   return <div className="min-h-screen flex flex-col bg-white">
       <section className="relative py-8 lg:py-12 bg-white">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-secondary via-background to-background opacity-50" />
@@ -183,10 +187,18 @@ const Index = () => {
         }} viewport={{
           once: true
         }}>
-            <Button variant="secondary" size="lg" onClick={handleContactClick} className="text-neutral-400 font-light text-center bg-accent-foreground">Download now from the App Store.</Button>
+            <Button 
+              variant="secondary" 
+              size="lg" 
+              onClick={handleAppStoreClick} 
+              className="text-neutral-400 font-light text-center bg-accent-foreground"
+            >
+              Download now from the App Store.
+            </Button>
           </motion.div>
         </div>
       </section>
     </div>;
 };
+
 export default Index;
