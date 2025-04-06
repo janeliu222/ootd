@@ -73,10 +73,22 @@ export default {
             opacity: "1",
           },
         },
+        "text-shimmer": {
+          "0%": {
+            backgroundPosition: "100% 50%",
+          },
+          "100%": {
+            backgroundPosition: "0% 50%",
+          },
+        },
       },
       animation: {
         "fade-up": "fade-up 0.5s ease-out",
         "fade-in": "fade-in 0.5s ease-out",
+        "text-shimmer": "text-shimmer 2s ease infinite",
+      },
+      dropShadow: {
+        "3d": "0 3px 3px rgba(0, 0, 0, 0.5)",
       },
     },
   },

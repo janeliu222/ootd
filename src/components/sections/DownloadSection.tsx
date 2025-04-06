@@ -20,11 +20,12 @@ const DownloadSection = ({ handleAppStoreClick }: DownloadSectionProps) => {
           <div className="flex justify-center">
             <Button 
               onClick={handleAppStoreClick} 
-              className="flex items-center justify-center bg-[#9b87f5] hover:bg-[#7E69AB] text-white w-[180px] h-[180px] text-base font-medium p-4 leading-tight text-center"
+              className="flex items-center justify-center bg-black hover:bg-gray-900 text-white w-[180px] h-[180px] text-base font-medium p-4 leading-tight text-center rounded-xl"
             >
               <span className="mx-auto flex flex-col items-center">
-                <span className="block text-lg mb-2">Download OOTD</span>
-                <span className="block text-lg">from iOS App Store</span>
+                <span className="block text-sm mb-2 text-gray-300">Download</span>
+                <span className="block text-2xl font-bold mb-2 text-transparent bg-clip-text bg-gradient-to-b from-pink-300 to-pink-500 drop-shadow-[0_2px_2px_rgba(0,0,0,0.5)]">OOTD</span>
+                <span className="block text-sm text-gray-300">from iOS App Store</span>
               </span>
             </Button>
           </div>
