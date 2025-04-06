@@ -17,9 +17,6 @@ const DownloadSection = ({ handleAppStoreClick }: DownloadSectionProps) => {
           viewport={{ once: true }}
           className="text-center"
         >
-          <p className="mx-auto max-w-2xl text-sm sm:text-base text-muted-foreground mb-4">
-            Get started with the OOTD app today on your iOS device.
-          </p>
           <div className="flex justify-center">
             <Button 
               onClick={handleAppStoreClick} 
