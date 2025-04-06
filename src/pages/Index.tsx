@@ -5,7 +5,6 @@ import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/components/ui/use-toast";
-
 const Feature = ({
   icon: Icon,
   title,
@@ -33,7 +32,6 @@ const Feature = ({
       <p className="text-sm text-muted-foreground">{description}</p>
     </motion.div>;
 };
-
 const RequestAccessDialog = () => {
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -95,27 +93,21 @@ const RequestAccessDialog = () => {
       </DialogContent>
     </Dialog>;
 };
-
 const Index = () => {
   const [mounted, setMounted] = useState(false);
   const {
     toast
   } = useToast();
-  
   useEffect(() => {
     setMounted(true);
   }, []);
-  
   const handleAppStoreClick = () => {
     window.open("https://apps.apple.com/ca/app/ootd-exploring-every-day/id6742367628", "_blank");
   };
-  
   const handleContactClick = () => {
     window.location.href = "mailto:eason@flickstudio.com";
   };
-  
   if (!mounted) return null;
-  
   return <div className="min-h-screen flex flex-col bg-white">
       <section className="relative py-8 lg:py-12 bg-white">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-secondary via-background to-background opacity-50" />
@@ -176,7 +168,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="relative py-16 bg-white">
+      <section className="relative bg-white py-0">
         <div className="container relative z-10 mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <motion.div initial={{
           opacity: 0,
@@ -189,12 +181,12 @@ const Index = () => {
         }} viewport={{
           once: true
         }} className="text-center space-y-8">
-            <h2 className="font-semibold tracking-tight text-2xl sm:text-3xl md:text-4xl text-zinc-950">Download Now</h2>
+            <h2 className="tracking-tight text-2xl sm:text-3xl md:text-4xl text-zinc-950 font-bold">Download Now</h2>
             <p className="mx-auto max-w-2xl text-base text-muted-foreground">
               Get started with the OOTD app today on your iOS device.
             </p>
             <div className="flex justify-center mt-6">
-              <Button onClick={handleAppStoreClick} className="flex items-center gap-2 bg-[#9b87f5] hover:bg-[#7E69AB] text-white">
+              <Button onClick={handleAppStoreClick} className="flex items-center gap-2 bg-[#9b87f5] hover:bg-[#7E69AB] text-white rounded-none">
                 Download from the App Store
               </Button>
             </div>
@@ -202,7 +194,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="relative py-16 bg-gray-50">
+      <section className="relative bg-gray-50 py-[32px]">
         <div className="container relative z-10 mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <motion.div initial={{
           opacity: 0,
@@ -215,10 +207,8 @@ const Index = () => {
         }} viewport={{
           once: true
         }} className="text-center space-y-8">
-            <h2 className="font-semibold tracking-tight text-2xl sm:text-3xl md:text-4xl text-zinc-950">Contact Us</h2>
-            <p className="mx-auto max-w-2xl text-base text-muted-foreground">
-              Have questions or need assistance? Get in touch with our team.
-            </p>
+            <h2 className="tracking-tight text-2xl sm:text-3xl md:text-4xl text-zinc-950 font-bold">Contact Us</h2>
+            
             <div className="flex justify-center mt-6">
               <Button onClick={handleContactClick} className="flex items-center gap-2 bg-[#9b87f5] hover:bg-[#7E69AB] text-white">
                 <Mail className="h-4 w-4" />
@@ -230,5 +220,4 @@ const Index = () => {
       </section>
     </div>;
 };
-
 export default Index;
