@@ -22,7 +22,7 @@ const DownloadSection = ({ handleAppStoreClick }: DownloadSectionProps) => {
               onClick={handleAppStoreClick} 
               className="flex items-center gap-2 bg-[#9b87f5] hover:bg-[#7E69AB] text-white px-5 py-2 text-sm sm:text-base"
             >
-              Download from the App Store
+              Download OOTD from iOS App Store
             </Button>
           </div>
         </motion.div>
