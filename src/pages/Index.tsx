@@ -113,10 +113,7 @@ const Index = () => {
   };
 
   const handleContactClick = () => {
-    toast({
-      title: "Contact Email",
-      description: "eason@flickstudioinc.com"
-    });
+    window.location.href = "mailto:eason@flickstudio.com";
   };
 
   if (!mounted) return null;
