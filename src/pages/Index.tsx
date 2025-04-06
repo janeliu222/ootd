@@ -1,11 +1,10 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { ChevronRight, Shield, Users, MessageCircle, Globe, Apple, Download } from "lucide-react";
+import { ChevronRight, Shield, Users, MessageCircle, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/components/ui/use-toast";
-
 const Feature = ({
   icon: Icon,
   title,
@@ -33,7 +32,6 @@ const Feature = ({
       <p className="text-sm text-muted-foreground">{description}</p>
     </motion.div>;
 };
-
 const RequestAccessDialog = () => {
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -97,7 +95,6 @@ const RequestAccessDialog = () => {
       </DialogContent>
     </Dialog>;
 };
-
 const Index = () => {
   const [mounted, setMounted] = useState(false);
   const {
@@ -173,40 +170,6 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="relative py-16 bg-gradient-to-r from-[#9b87f5]/10 to-[#7E69AB]/10 rounded-lg my-8 mx-4">
-        <div className="container mx-auto px-4">
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-            className="text-center space-y-8"
-          >
-            <h2 className="text-2xl sm:text-3xl font-semibold text-zinc-900">Get OOTD on iOS</h2>
-            <p className="mx-auto max-w-2xl text-base text-muted-foreground">
-              Experience the full potential of OOTD on your iPhone. Download now from the App Store.
-            </p>
-            
-            <div className="flex flex-col items-center justify-center space-y-4">
-              <Button 
-                className="bg-[#9b87f5] hover:bg-[#7E69AB] text-white px-6 py-6 h-auto rounded-xl shadow-lg flex items-center space-x-3 transition-all duration-300"
-                onClick={() => window.open('https://apps.apple.com/app/id123456789', '_blank')}
-              >
-                <Apple className="h-6 w-6" />
-                <div className="flex flex-col items-start">
-                  <span className="text-xs font-light">Download on the</span>
-                  <span className="text-lg font-semibold">App Store</span>
-                </div>
-              </Button>
-              
-              <div className="mt-4 text-sm text-neutral-500">
-                iOS 14.0 or later required
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
       <section className="relative py-8 bg-white">
         <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div initial={{
@@ -220,13 +183,10 @@ const Index = () => {
         }} viewport={{
           once: true
         }}>
-            <Button variant="secondary" size="lg" onClick={handleContactClick} className="text-neutral-400 font-light text-center bg-accent-foreground">
-              Contact Us
-            </Button>
+            <Button variant="secondary" size="lg" onClick={handleContactClick} className="text-neutral-400 font-light text-center bg-accent-foreground">Download now from the App Store.</Button>
           </motion.div>
         </div>
       </section>
     </div>;
 };
-
 export default Index;
