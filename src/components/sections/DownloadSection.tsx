@@ -20,7 +20,7 @@ const DownloadSection = ({ handleAppStoreClick }: DownloadSectionProps) => {
           <div className="flex justify-center">
             <Button 
               onClick={handleAppStoreClick} 
-              className="flex items-center gap-2 bg-[#9b87f5] hover:bg-[#7E69AB] text-white px-5 py-2 text-sm sm:text-base"
+              className="flex items-center justify-center bg-[#9b87f5] hover:bg-[#7E69AB] text-white px-5 py-2 text-sm sm:text-base h-10 w-[180px]"
             >
               Download OOTD from iOS App Store
             </Button>
