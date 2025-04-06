@@ -22,16 +22,16 @@ const DownloadSection = ({ handleAppStoreClick }: DownloadSectionProps) => {
               onClick={handleAppStoreClick} 
               className="flex items-center justify-center bg-black hover:bg-gray-900 text-white w-[200px] h-[200px] text-base font-medium leading-tight text-center rounded-xl shadow-lg"
             >
-              <span className="mx-auto flex flex-col items-center justify-between h-full py-6">
-                <span className="block text-sm font-medium text-gray-300">Download</span>
-                <div className="flex items-center justify-center h-28">
+              <span className="mx-auto flex flex-col items-center justify-between h-full py-3">
+                <span className="block text-sm font-medium text-gray-300 mb-1">Download</span>
+                <div className="flex items-center justify-center h-28 my-1">
                   <img 
                     src="/lovable-uploads/32b76c0c-b90a-4a46-85ee-f6b8c5c60b6c.png" 
                     alt="OOTD" 
                     className="w-28 object-contain"
                   />
                 </div>
-                <span className="block text-sm font-medium text-gray-300">from iOS App Store</span>
+                <span className="block text-sm font-medium text-gray-300 mt-1">from iOS App Store</span>
               </span>
             </Button>
           </div>
