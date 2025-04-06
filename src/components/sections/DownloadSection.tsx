@@ -25,7 +25,7 @@ const DownloadSection = ({ handleAppStoreClick }: DownloadSectionProps) => {
               <span className="mx-auto flex flex-col items-center">
                 <span className="block text-sm mb-2 text-gray-300">Download</span>
                 <img 
-                  src="/lovable-uploads/7515c51c-8397-4cf8-8e2a-58d2d53f26bf.png" 
+                  src="/lovable-uploads/a2270d56-6e2c-4ea4-b189-6b288fe1b075.png" 
                   alt="OOTD" 
                   className="w-24 h-auto my-1"
                 />
