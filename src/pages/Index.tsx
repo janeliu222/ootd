@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { ChevronRight, Shield, Users, MessageCircle, Globe } from "lucide-react";
+import { ChevronRight, Shield, Users, MessageCircle, Globe, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
@@ -112,6 +112,13 @@ const Index = () => {
     window.open("https://apps.apple.com/ca/app/ootd-exploring-every-day/id6742367628", "_blank");
   };
 
+  const handleContactClick = () => {
+    toast({
+      title: "Contact Email",
+      description: "eason@flickstudioinc.com"
+    });
+  };
+
   if (!mounted) return null;
   
   return <div className="min-h-screen flex flex-col bg-white">
@@ -195,6 +202,32 @@ const Index = () => {
             >
               Download now from the App Store.
             </Button>
+          </motion.div>
+        </div>
+      </section>
+
+      <section className="relative py-16 bg-gray-50">
+        <div className="container relative z-10 mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+            className="text-center space-y-8"
+          >
+            <h2 className="font-semibold tracking-tight text-2xl sm:text-3xl md:text-4xl text-zinc-950">Contact Us</h2>
+            <p className="mx-auto max-w-2xl text-base text-muted-foreground">
+              Have questions or need assistance? Get in touch with our team.
+            </p>
+            <div className="flex justify-center mt-6">
+              <Button 
+                onClick={handleContactClick}
+                className="flex items-center gap-2 bg-[#9b87f5] hover:bg-[#7E69AB] text-white"
+              >
+                <Mail className="h-4 w-4" />
+                Contact Support
+              </Button>
+            </div>
           </motion.div>
         </div>
       </section>
