@@ -17,9 +17,6 @@ const DownloadSection = ({ handleAppStoreClick }: DownloadSectionProps) => {
           viewport={{ once: true }}
           className="text-center space-y-8"
         >
-          <h2 className="tracking-tight text-2xl sm:text-3xl md:text-4xl text-zinc-950 font-bold">
-            Download Now
-          </h2>
           <p className="mx-auto max-w-2xl text-base text-muted-foreground">
             Get started with the OOTD app today on your iOS device.
           </p>
