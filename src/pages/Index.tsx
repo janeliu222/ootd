@@ -192,10 +192,8 @@ const Index = () => {
           once: true
         }}>
             <Button 
-              variant="secondary" 
-              size="lg" 
               onClick={handleAppStoreClick} 
-              className="text-neutral-400 font-light text-center bg-accent-foreground"
+              className="flex items-center gap-2 bg-[#9b87f5] hover:bg-[#7E69AB] text-white"
             >
               Download now from the App Store.
             </Button>
