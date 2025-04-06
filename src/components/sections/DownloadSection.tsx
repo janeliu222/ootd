@@ -24,7 +24,11 @@ const DownloadSection = ({ handleAppStoreClick }: DownloadSectionProps) => {
             >
               <span className="mx-auto flex flex-col items-center">
                 <span className="block text-sm mb-2 text-gray-300">Download</span>
-                <span className="block text-2xl font-bold mb-2 text-transparent bg-clip-text bg-gradient-to-b from-pink-300 to-pink-500 drop-shadow-[0_2px_2px_rgba(0,0,0,0.5)]">OOTD</span>
+                <img 
+                  src="/lovable-uploads/7515c51c-8397-4cf8-8e2a-58d2d53f26bf.png" 
+                  alt="OOTD" 
+                  className="w-24 h-auto my-1"
+                />
                 <span className="block text-sm text-gray-300">from iOS App Store</span>
               </span>
             </Button>
