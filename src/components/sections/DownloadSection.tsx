@@ -17,10 +17,10 @@ const DownloadSection = ({ handleAppStoreClick }: DownloadSectionProps) => {
           viewport={{ once: true }}
           className="text-center"
         >
-          <div className="flex justify-center">
+          <div className="flex flex-col items-center justify-center">
             <Button 
               onClick={handleAppStoreClick} 
-              className="flex items-center justify-center bg-black hover:bg-gray-900 text-white w-[200px] h-[200px] text-base font-medium leading-tight text-center rounded-xl shadow-lg"
+              className="flex items-center justify-center bg-black hover:bg-gray-900 text-white w-[200px] h-[200px] text-base font-medium leading-tight text-center rounded-xl shadow-lg mb-6"
             >
               <span className="mx-auto flex flex-col items-center justify-between h-full py-3">
                 <span className="block text-sm font-medium text-gray-300 mb-1">Download</span>
@@ -34,6 +34,15 @@ const DownloadSection = ({ handleAppStoreClick }: DownloadSectionProps) => {
                 <span className="block text-sm font-medium text-gray-300 mt-1">from iOS App Store</span>
               </span>
             </Button>
+            
+            {/* QR Code Image */}
+            <div className="w-[200px] h-[200px] bg-white p-2 rounded-xl shadow-lg">
+              <img 
+                src="/lovable-uploads/0b4ccee2-a2f0-4006-add8-77cf741456a1.png" 
+                alt="App QR Code" 
+                className="w-full h-full object-contain"
+              />
+            </div>
           </div>
         </motion.div>
       </div>
