@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 const AppBannerSection = () => {
   return <section className="relative bg-black py-16">
@@ -12,7 +13,7 @@ const AppBannerSection = () => {
         duration: 0.5
       }} viewport={{
         once: true
-      }} className="flex flex-col md:flex-row items-center justify-center md:justify-between gap-8">
+      }} className="flex flex-col items-center justify-center">
           <div className="flex flex-col md:flex-row items-center gap-6">
             <div className="w-32 h-32 rounded-3xl overflow-hidden">
               <img src="/lovable-uploads/c0836107-2e44-4514-91c4-1e9cedb30535.png" alt="OOTD App Icon" className="w-full h-full object-cover" />
