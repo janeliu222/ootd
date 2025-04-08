@@ -37,7 +37,7 @@ const AppBannerSection = () => {
             </div>
           </div>
           
-          <div className="mt-8 bg-white p-4 rounded-xl w-64 h-64 flex items-center justify-center">
+          <div className="mt-8 bg-white p-4 rounded-xl w-[200px] h-[200px] flex items-center justify-center">
             <img 
               src="/lovable-uploads/bfc6d615-0237-4ab3-a611-846a85d35230.png" 
               alt="OOTD QR Code" 
