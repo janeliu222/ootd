@@ -1,9 +1,12 @@
+
 import { motion } from "framer-motion";
 import { Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
+
 interface ContactSectionProps {
   handleContactClick: () => void;
 }
+
 const ContactSection = ({
   handleContactClick
 }: ContactSectionProps) => {
@@ -30,4 +33,5 @@ const ContactSection = ({
       </div>
     </section>;
 };
+
 export default ContactSection;

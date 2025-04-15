@@ -23,7 +23,7 @@ const Index = () => {
   };
   
   const handleContactClick = () => {
-    window.location.href = "mailto:eason@flickstudio.com";
+    window.location.href = "mailto:eason@flickstudioinc.com";
   };
   
   if (!mounted) return null;
